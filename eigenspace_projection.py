@@ -17,8 +17,8 @@ method: method for scipy.spatial.distance.cdist to use (ex. euclidean, cosine)
 
 """
 def predict(data_train, data_test, labels_train, labels_test, p=None, method='euclidean'):
-    eigval, eigvec = p_eigens(data_train, p=p)
-    
+    _, eigvec = p_eigens(data_train, p=p)
+
     # Project the data into p-eigenspace
     train_proj = data_train @ eigvec
     test_proj = data_test @ eigvec

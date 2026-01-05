@@ -40,7 +40,7 @@ if __name__ == "__main__":
     
     data = data.reshape(t_images_per_class*num_classes, image_size)
     eigval, eigvec = p_eigens(data, p=50)
-    
+
     for i in range(4):
         plt.figure(i)
         img = eigvec[:, i].reshape(h, w)
